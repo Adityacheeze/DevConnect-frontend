@@ -25,6 +25,8 @@
 - Redirect to /login if token is not present
 - If token is valid then fetch data by calling /profile/view API and put it in store if page reloads.
 - No API calls when user is already Login and pages are switched without reload
+- Build switch to profile and home page feature
+- Built Logout feature
 
 ### Routing 
 - In App.jsx : 
