@@ -20,8 +20,11 @@
 - Create Login.jsx
 - Perform POST API call on "/login"
 - Upon Login add user to store using `useDispatch`
-- update the NavBar.jsx according to user data using `useSelector`
+- Update the NavBar.jsx according to user data using `useSelector`
 - Redirect user to "/" or render Feed.jsx using `useNavigate`
+- Redirect to /login if token is not present
+- If token is valid then fetch data by calling /profile/view API and put it in store if page reloads.
+- No API calls when user is already Login and pages are switched without reload
 
 ### Routing 
 - In App.jsx : 
