@@ -2,6 +2,10 @@
 - Create Vite + React Project
 - Remove unncessary code
 - Initialize git repo
-- Install Tailwind
-- Install Daisy UI
-- Add Navbar from daisy UI
+- Install Tailwind for CSS
+- Install Daisy UI for UI components
+- Add Navbar.jsx from daisy UI
+- Install React Router Dom for routing
+- Setup Routing
+- Use nested routing and render different components using <Outlet/>
+- Create Footer.jsx
