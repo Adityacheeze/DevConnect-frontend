@@ -27,6 +27,9 @@
 - No API calls when user is already Login and pages are switched without reload
 - Build switch to profile and home page feature
 - Built Logout feature
+- Build feedSlice and feedReducer
+- Add feedSlice to the store
+- Build feed feature
 
 ### Routing 
 - In App.jsx : 
