@@ -28,13 +28,12 @@ const Requests = () => {
         <div className="font-bold text-2xl my-10">No requests Found</div>
       </div>
     );
-    console.log(requests);
   return (
     <div className="text-center">
       <div className="font-bold text-2xl my-10">Connection Requests</div>
-      <div className="flex flex-col gap-10 items-center m-10">
+      <div key={requests._id} className="flex flex-col gap-10 items-center m-10">
         {requests.map((request) => {
-          return <Card user={request.fromUserId} flag={true} />;
+          return <Card user={request.fromUserId} flag={true} id={request._id}/>;
         })}
       </div>
     </div>

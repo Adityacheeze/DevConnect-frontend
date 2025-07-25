@@ -20,7 +20,7 @@ const UserCard = ({user}) => {
         <p>
           {user.gender && user.gender}
         </p>
-        <p>
+        <p key={user._id}>
           {user.skills && "SKILLS : " + user.skills.map(skill => " " + skill)}
         </p>
         <div className="card-actions justify-center my-4">

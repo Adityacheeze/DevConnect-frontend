@@ -27,7 +27,7 @@ const Connections = () => {
   return (
     <div className="text-center">
       <div className="font-bold text-2xl my-10">Connections</div>
-      <div className="flex flex-col gap-10 items-center m-10">
+      <div key={connections._id} className="flex flex-col gap-10 items-center m-10">
         {connections.map((connection) => {
           return <Card user={connection} />;
         })}
