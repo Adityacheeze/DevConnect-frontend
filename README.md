@@ -35,6 +35,8 @@
 - Build connections feature
 - Created requestSlice and requestReducer
 - Build requests feature
+- Add Accepted/Rejected Connection Request Functionality from requests
+- Add Interested/Ignored Connection Request Functionality from feed
 
 ### Routing 
 - In App.jsx : 

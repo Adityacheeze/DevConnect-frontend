@@ -13,6 +13,7 @@ const EditProfile = ({ user }) => {
       .filter((word) => word.length > 0);
   }
   const [firstName, setFirstName] = useState(user.firstName);
+  const [_id, set_id] = useState(user._id);
   const [lastName, setLastName] = useState(user.lastName);
   const [age, setAge] = useState(user.age);
   const [gender, setGender] = useState(user.gender);
@@ -166,7 +167,7 @@ const EditProfile = ({ user }) => {
           </div>
         </div>
         <UserCard
-          user={{ firstName, lastName, age, gender, about, photoURL, skills }}
+          user={{_id, firstName, lastName, age, gender, about, photoURL, skills }}
         />
       </div>
     </>
