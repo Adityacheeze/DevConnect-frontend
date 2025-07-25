@@ -30,6 +30,7 @@
 - Build feedSlice and feedReducer
 - Add feedSlice to the store
 - Build feed feature
+- Build Edit Profile feature
 
 ### Routing 
 - In App.jsx : 
