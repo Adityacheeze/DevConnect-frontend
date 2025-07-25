@@ -1,5 +1,4 @@
 import axios from "axios";
-import React from "react";
 import { BASE_URL } from "../constants";
 import { useDispatch, useSelector } from "react-redux";
 import { addFeed } from "../utils/feedSlice";

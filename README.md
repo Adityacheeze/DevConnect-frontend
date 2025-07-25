@@ -37,6 +37,7 @@
 - Build requests feature
 - Add Accepted/Rejected Connection Request Functionality from requests
 - Add Interested/Ignored Connection Request Functionality from feed
+- Add Signup form
 
 ### Routing 
 - In App.jsx : 

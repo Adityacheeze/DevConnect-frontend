@@ -26,7 +26,7 @@ const UserCard = ({ user }) => {
       <div className="card-body">
         <h2 className="card-title">{user.firstName + " " + user.lastName}</h2>
         <p>{user.about}</p>
-        <p>{user.age && user.age}</p>
+        <p>{user.age && "AGE : " + user.age}</p>
         <p>{user.gender && user.gender}</p>
         <p key={user._id}>
           {user.skills && "SKILLS : " + user.skills.map((skill) => " " + skill)}
