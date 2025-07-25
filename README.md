@@ -33,6 +33,8 @@
 - Build Edit Profile feature
 - Created connectionSlice and connectionReducer
 - Build connections feature
+- Created requestSlice and requestReducer
+- Build requests feature
 
 ### Routing 
 - In App.jsx : 
