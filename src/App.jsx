@@ -10,7 +10,7 @@ import Requests from "./components/Requests";
 
 function App() {
   return (
-    <>
+    <div className = "bg-gradient-to-bl from-gray-900 via-blue-900 to-gray-900">
       <Provider store={appStore}>
         <BrowserRouter basename="/">
           <Routes>
@@ -24,7 +24,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </Provider>
-    </>
+    </div>
   );
 }
 

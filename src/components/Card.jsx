@@ -20,7 +20,7 @@ const Card = ({ user, flag, id }) => {
     }
   };
   return (
-    <div className="card card-side bg-base-300 shadow-sm p-4 w-125">
+    <div className="card card-side bg-base-300 shadow-sm p-4 w-125 bg-gradient-to-tr from-purple-200 via-indigo-400 to-violet-600">
       <figure>
         <img
           className="rounded-full h-40 w-40"

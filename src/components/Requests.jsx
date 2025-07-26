@@ -24,7 +24,7 @@ const Requests = () => {
   if (!requests) return;
   if (requests.length === 0)
     return (
-      <div className="flex justify-center">
+      <div className="flex justify-center h-screen">
         <div className="font-bold text-2xl my-10">No requests Found</div>
       </div>
     );

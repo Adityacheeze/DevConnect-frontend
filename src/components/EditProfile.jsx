@@ -56,15 +56,15 @@ const EditProfile = ({ user }) => {
   return (
     <>
       {showToast && (
-        <div className="toast toast-top toast-center">
+        <div className="toast toast-top toast-center z-10">
           <div className="alert alert-success">
             <span>Profile Saved Successfully.</span>
           </div>
         </div>
       )}
-      <div className="flex gap-10 justify-center my-10">
-        <div className="flex justify-center">
-          <div className="card bg-base-300 w-96 shadow-sm">
+      <div className="flex gap-10 justify-center my-10 ">
+        <div className="flex justify-center ">
+          <div className="card bg-base-300 w-96 shadow-sm bg-gradient-to-bl from-gray-600 via-blue-400 to-gray-600">
             <div className="card-body">
               <h2 className="card-title justify-center">Edit Profile</h2>
               <div className="py-4">
@@ -72,7 +72,7 @@ const EditProfile = ({ user }) => {
                   <legend className="fieldset-legend">First Name</legend>
                   <input
                     type="text"
-                    className="input"
+                    className="input bg-gradient-to-bl from-gray-900 via-blue-900 to-gray-900"
                     value={firstName}
                     placeholder="Type here"
                     onChange={(e) => {
@@ -84,7 +84,7 @@ const EditProfile = ({ user }) => {
                   <legend className="fieldset-legend">Last Name</legend>
                   <input
                     type="text"
-                    className="input"
+                    className="input bg-gradient-to-bl from-gray-900 via-blue-900 to-gray-900"
                     value={lastName}
                     placeholder="Type here"
                     onChange={(e) => {
@@ -96,7 +96,7 @@ const EditProfile = ({ user }) => {
                   <legend className="fieldset-legend">Age</legend>
                   <input
                     type="text"
-                    className="input"
+                    className="input bg-gradient-to-bl from-gray-900 via-blue-900 to-gray-900"
                     value={age}
                     placeholder="Type here"
                     onChange={(e) => {
@@ -107,7 +107,7 @@ const EditProfile = ({ user }) => {
                 <fieldset className="fieldset">
                   <legend className="fieldset-legend">Gender</legend>
                   <select
-                    className="input"
+                    className="input bg-gradient-to-bl from-gray-900 via-blue-900 to-gray-900"
                     value={gender}
                     onChange={(e) => {
                       setGender(e.target.value);
@@ -123,7 +123,7 @@ const EditProfile = ({ user }) => {
                   <legend className="fieldset-legend">Photo URL</legend>
                   <input
                     type="text"
-                    className="input"
+                    className="input bg-gradient-to-bl from-gray-900 via-blue-900 to-gray-900"
                     value={photoURL}
                     placeholder="Type here"
                     onChange={(e) => {
@@ -133,21 +133,22 @@ const EditProfile = ({ user }) => {
                 </fieldset>
                 <fieldset className="fieldset">
                   <legend className="fieldset-legend">About</legend>
-                  <input
-                    type="text"
-                    className="input"
+                  <textarea
+                    className="textarea bg-gradient-to-bl from-gray-900 via-blue-900 to-gray-900"
                     value={about}
                     placeholder="Type here"
                     onChange={(e) => {
                       setAbout(e.target.value);
                     }}
+                    rows={4}
                   />
                 </fieldset>
+
                 <fieldset className="fieldset">
                   <legend className="fieldset-legend">Skills</legend>
                   <input
                     type="text"
-                    className="input"
+                    className="input bg-gradient-to-bl from-gray-900 via-blue-900 to-gray-900"
                     value={skillsInput}
                     placeholder="Type comma-separated skills"
                     onChange={(e) => {
@@ -167,7 +168,16 @@ const EditProfile = ({ user }) => {
           </div>
         </div>
         <UserCard
-          user={{_id, firstName, lastName, age, gender, about, photoURL, skills }}
+          user={{
+            _id,
+            firstName,
+            lastName,
+            age,
+            gender,
+            about,
+            photoURL,
+            skills,
+          }}
         />
       </div>
     </>

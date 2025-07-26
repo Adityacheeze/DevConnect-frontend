@@ -50,13 +50,7 @@ const login = () => {
   };
   return (
     <div className="flex justify-center">
-      <div className="card bg-base-300 w-96 shadow-sm my-10">
-        {/* <figure>
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-            alt="Shoes"
-          />
-        </figure> */}
+      <div className="card bg-base-300 w-96 shadow-sm my-10 bg-gradient-to-bl from-gray-900 via-blue-900 to-gray-900">
         <div className="card-body">
           <h2 className="card-title justify-center">
             {isLoginForm ? "Login" : "SignUp"}
@@ -68,7 +62,7 @@ const login = () => {
                   <legend className="fieldset-legend">First Name</legend>
                   <input
                     type="text"
-                    className="input"
+                    className="input bg-gradient-to-tr from-purple-900 via-indigo-700 to-violet-900"
                     value={firstName}
                     placeholder="Type here"
                     onChange={(e) => {
@@ -80,7 +74,7 @@ const login = () => {
                   <legend className="fieldset-legend">Last Name</legend>
                   <input
                     type="text"
-                    className="input"
+                    className="input bg-gradient-to-tr from-purple-900 via-indigo-700 to-violet-900"
                     value={lastName}
                     placeholder="Type here"
                     onChange={(e) => {
@@ -95,7 +89,7 @@ const login = () => {
               <legend className="fieldset-legend">Email ID</legend>
               <input
                 type="text"
-                className="input"
+                className="input bg-gradient-to-tr from-purple-900 via-indigo-700 to-violet-900"
                 value={email}
                 placeholder="Type here"
                 onChange={(e) => {
@@ -107,7 +101,7 @@ const login = () => {
               <legend className="fieldset-legend">Password</legend>
               <input
                 type="password"
-                className="input"
+                className="input bg-gradient-to-tr from-purple-900 via-indigo-700 to-violet-900"
                 value={password}
                 placeholder="Type here"
                 onChange={(e) => {
@@ -121,7 +115,7 @@ const login = () => {
             <button className="btn btn-primary" onClick={isLoginForm ? handleLogin : handleSignup}>
               {isLoginForm ? "Login" : "SignUp"}
             </button>
-            <span className="text-gray-500 my-4 cursor-pointer" onClick={() => setIsLoginForm((prev) => !prev)}>
+            <span className="my-4 cursor-pointer" onClick={() => setIsLoginForm((prev) => !prev)}>
               {isLoginForm
                 ? "New User... SignUp here"
                 : "Existing User... Login Here"}

@@ -25,7 +25,7 @@ const NavBar = () => {
     }
   };
   return (
-    <div className="navbar bg-base-300 shadow-sm">
+    <div className="navbar bg-base-300 shadow-sm bg-gradient-to-tr from-zinc-500 via-stone-600 to-zinc-900">
       <div className="flex-1">
         <a href="/" className="btn btn-ghost text-xl">
           🧑‍💻devTinder
@@ -47,12 +47,11 @@ const NavBar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-300  rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-md dropdown-content bg-base-300  rounded-box z-1 mt-3 w-52 p-2 shadow bg-gradient-to-bl from-gray-900 via-blue-900 to-gray-900"
           >
             <li>
               <Link to={"/profile"} className="justify-between">
                 Profile
-                <span className="badge">New</span>
               </Link>
             </li>
             <li>

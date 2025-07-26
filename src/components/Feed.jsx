@@ -26,7 +26,7 @@ const Feed = () => {
 
   if(feed === null) return <div> NO FEED FOUND</div>;
   if(feed.length === 0) return (
-      <div className="flex justify-center">
+      <div className="flex justify-center h-screen">
         <div className="font-bold text-2xl my-10">NO USER IN FEED, TRY AGAIN LATER</div>
       </div>
     );
