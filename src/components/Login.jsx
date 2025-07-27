@@ -49,8 +49,8 @@ const login = () => {
     }
   };
   return (
-    <div className="flex justify-center">
-      <div className="card bg-base-300 w-96 shadow-sm my-10 bg-gradient-to-bl from-gray-900 via-blue-900 to-gray-900">
+    <div className="flex justify-center h-screen">
+      <div className="card bg-base-300 w-96 h-fit shadow-sm my-10">
         <div className="card-body">
           <h2 className="card-title justify-center">
             {isLoginForm ? "Login" : "SignUp"}
@@ -62,7 +62,7 @@ const login = () => {
                   <legend className="fieldset-legend">First Name</legend>
                   <input
                     type="text"
-                    className="input bg-gradient-to-tr from-purple-900 via-indigo-700 to-violet-900"
+                    className="input"
                     value={firstName}
                     placeholder="Type here"
                     onChange={(e) => {
@@ -74,7 +74,7 @@ const login = () => {
                   <legend className="fieldset-legend">Last Name</legend>
                   <input
                     type="text"
-                    className="input bg-gradient-to-tr from-purple-900 via-indigo-700 to-violet-900"
+                    className="input"
                     value={lastName}
                     placeholder="Type here"
                     onChange={(e) => {
@@ -89,7 +89,7 @@ const login = () => {
               <legend className="fieldset-legend">Email ID</legend>
               <input
                 type="text"
-                className="input bg-gradient-to-tr from-purple-900 via-indigo-700 to-violet-900"
+                className="input"
                 value={email}
                 placeholder="Type here"
                 onChange={(e) => {
@@ -101,7 +101,7 @@ const login = () => {
               <legend className="fieldset-legend">Password</legend>
               <input
                 type="password"
-                className="input bg-gradient-to-tr from-purple-900 via-indigo-700 to-violet-900"
+                className="input"
                 value={password}
                 placeholder="Type here"
                 onChange={(e) => {

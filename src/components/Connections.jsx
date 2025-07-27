@@ -20,12 +20,12 @@ const Connections = () => {
   if (!connections) return;
   if (connections.length === 0)
     return (
-      <div className="flex justify-center  h-screen">
+      <div className="flex justify-center h-screen">
         <div className="font-bold text-2xl my-10">No Connections Found</div>
       </div>
     );
   return (
-    <div className="text-center">
+    <div className="text-center h-screen">
       <div className="font-bold text-2xl my-10">Connections</div>
       <div key={connections._id} className="flex flex-col gap-10 items-center m-10">
         {connections.map((connection) => {

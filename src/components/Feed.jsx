@@ -32,8 +32,11 @@ const Feed = () => {
     );
   else return (
     feed && (
-      <div className="flex justify-center my-10">
-        <UserCard user={feed[0]}/>
+      <div className="flex flex-col gap-10 items-center my-10 h-screen">
+        {feed.map((u) => {
+          return <UserCard user={u}/>
+        })}
+        
       </div>
     )
   );

@@ -21,7 +21,7 @@ const UserCard = ({ user }) => {
   };
 
   return (
-    <div className="card bg-base-300 shadow-sm w-96 h-[550px] bg-gradient-to-tr from-purple-200 via-indigo-400 to-violet-600">
+    <div className="card bg-base-300 shadow-sm w-96 h-[550px]">
       <figure className="h-[200px] overflow-hidden">
         <img
           src={user.photoURL}
@@ -38,7 +38,7 @@ const UserCard = ({ user }) => {
         {user.gender && <p className="text-sm">{user.gender}</p>}
         {user.skills && (
           <p className="text-sm">
-            SKILLS: {user.skills.map((skill) => " " + skill)}
+            SKILLS: {user.skills.map((skill) =>  skill + ", ")}
           </p>
         )}
         <div className="card-actions justify-center mt-auto">

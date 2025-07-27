@@ -29,7 +29,7 @@ const Requests = () => {
       </div>
     );
   return (
-    <div className="text-center">
+    <div className="text-center h-screen">
       <div className="font-bold text-2xl my-10">Connection Requests</div>
       <div key={requests._id} className="flex flex-col gap-10 items-center m-10">
         {requests.map((request) => {
