@@ -25,7 +25,7 @@ const Connections = () => {
       </div>
     );
   return (
-    <div className="text-center h-screen">
+    <div className="text-center min-h-max">
       <div className="font-bold text-2xl my-10">Connections</div>
       <div key={connections._id} className="flex flex-col gap-10 items-center m-10">
         {connections.map((connection) => {
