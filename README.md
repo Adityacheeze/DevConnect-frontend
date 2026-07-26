@@ -1,4 +1,4 @@
-# devTinder Frontend
+# devConenct Frontend
 
 - Create Vite + React Project
 - Remove unncessary code
