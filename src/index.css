@@ -1,2 +1,233 @@
 @import "tailwindcss";
-@plugin "daisyui";
+
+@theme {
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+:root {
+  color: #f5f3ff;
+  background: #05050b;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: #05050b;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(124, 58, 237, 0.22), transparent 34rem),
+    radial-gradient(circle at 80% 10%, rgba(6, 182, 212, 0.16), transparent 30rem),
+    linear-gradient(135deg, #05050b 0%, #0b0b18 48%, #070a12 100%);
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  color: white;
+  background: rgba(168, 85, 247, 0.62);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.85);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid rgba(15, 23, 42, 0.85);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(168, 85, 247, 0.85), rgba(34, 211, 238, 0.82));
+}
+
+@layer components {
+  .glass-panel {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.035)),
+      rgba(8, 8, 18, 0.64);
+    box-shadow:
+      0 24px 80px rgba(0, 0, 0, 0.45),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(28px);
+  }
+
+  .glass-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(120deg, rgba(168, 85, 247, 0.2), transparent 28%, rgba(34, 211, 238, 0.14) 58%, transparent 82%),
+      radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.12), transparent 24rem);
+    opacity: 0.78;
+  }
+
+  .glass-panel > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .gradient-text {
+    background: linear-gradient(100deg, #faf5ff 0%, #c084fc 33%, #22d3ee 72%, #f0f9ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .aurora-button,
+  .ghost-button,
+  .danger-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.75rem;
+    border-radius: 999px;
+    padding: 0.72rem 1.2rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+  }
+
+  .aurora-button {
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: white;
+    background: linear-gradient(135deg, #7c3aed, #a855f7 45%, #06b6d4);
+    box-shadow: 0 14px 34px rgba(124, 58, 237, 0.34), 0 0 28px rgba(6, 182, 212, 0.2);
+  }
+
+  .ghost-button {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #e9d5ff;
+    background: rgba(255, 255, 255, 0.065);
+  }
+
+  .danger-button {
+    border: 1px solid rgba(248, 113, 113, 0.36);
+    color: white;
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.92), rgba(236, 72, 153, 0.82));
+    box-shadow: 0 14px 34px rgba(220, 38, 38, 0.28);
+  }
+
+  .aurora-button:hover,
+  .ghost-button:hover,
+  .danger-button:hover {
+    transform: translateY(-2px) scale(1.01);
+  }
+
+  .aurora-button:active,
+  .ghost-button:active,
+  .danger-button:active {
+    transform: translateY(0) scale(0.99);
+  }
+
+  .form-field {
+    width: 100%;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(5, 5, 15, 0.58);
+    color: #f8fafc;
+    outline: none;
+    padding: 0.9rem 1rem;
+    transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  }
+
+  .form-field::placeholder {
+    color: rgba(203, 213, 225, 0.45);
+  }
+
+  .form-field:focus {
+    border-color: rgba(34, 211, 238, 0.68);
+    background: rgba(15, 23, 42, 0.7);
+    box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.11), 0 0 24px rgba(168, 85, 247, 0.16);
+  }
+
+  .skill-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border-radius: 999px;
+    border: 1px solid rgba(34, 211, 238, 0.22);
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.22), rgba(6, 182, 212, 0.12));
+    padding: 0.42rem 0.72rem;
+    color: #dbeafe;
+    font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  .ambient-orb {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 999px;
+    filter: blur(26px);
+    opacity: 0.58;
+    mix-blend-mode: screen;
+    animation: drift 9s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(18px, -24px, 0) scale(1.12);
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
